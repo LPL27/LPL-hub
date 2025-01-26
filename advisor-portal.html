@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advisor Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="portal-container">
+        <nav class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 id="advisorName">Loading...</h3>
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-view="matches">
+                    <i class="fas fa-users"></i> Potential Clients
+                </li>
+                <li data-view="messages">
+                    <i class="fas fa-envelope"></i> Messages
+                    <span class="message-badge" id="unreadCount">0</span>
+                </li>
+                <li data-view="settings">
+                    <i class="fas fa-cog"></i> Settings
+                </li>
+                <li id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <!-- Matches View -->
+            <div class="view-section" id="matchesView">
+                <div class="client-card-container">
+                    <div class="client-card" id="currentCard">
+                        <div class="card-buttons">
+                            <button class="reject-btn">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <button class="accept-btn">
+                                <i class="fas fa-check"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages View -->
+            <div class="view-section" id="messagesView" style="display: none;">
+                <div class="messages-container">
+                    <div class="conversations-list">
+                        <!-- Conversations will be loaded here -->
+                    </div>
+                    <div class="chat-window">
+                        <div class="chat-messages">
+                            <!-- Messages will be loaded here -->
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Type a message...">
+                            <button><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings View -->
+            <div class="view-section" id="settingsView" style="display: none;">
+                <div class="settings-container">
+                    <h2>Profile Settings</h2>
+                    <form id="settingsForm">
+                        <!-- Settings fields will be loaded dynamically -->
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="database.js"></script>
+    <script src="advisor-portal.js"></script>
+</body>
+</html>

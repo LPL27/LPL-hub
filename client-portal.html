@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="portal-container">
+        <nav class="sidebar">
+            <div class="profile-section">
+                <div class="profile-image">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 id="clientName">Loading...</h3>
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-view="invitations">
+                    <i class="fas fa-envelope"></i> Advisor Invitations
+                    <span class="badge" id="invitationCount">0</span>
+                </li>
+                <li data-view="messages">
+                    <i class="fas fa-comments"></i> Messages
+                    <span class="badge" id="unreadCount">0</span>
+                </li>
+                <li data-view="profile">
+                    <i class="fas fa-user"></i> My Profile
+                </li>
+                <li data-view="settings">
+                    <i class="fas fa-cog"></i> Settings
+                </li>
+                <li id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </li>
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <!-- Invitations View -->
+            <div class="view-section" id="invitationsView">
+                <div class="invitations-container">
+                    <h2>Advisor Invitations</h2>
+                    <div class="invitations-list">
+                        <!-- Invitations will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages View -->
+            <div class="view-section" id="messagesView" style="display: none;">
+                <div class="messages-container">
+                    <div class="conversations-list">
+                        <!-- Conversations will be loaded here -->
+                    </div>
+                    <div class="chat-window">
+                        <div class="chat-header">
+                            <h3>Select a conversation</h3>
+                        </div>
+                        <div class="chat-messages">
+                            <!-- Messages will be loaded here -->
+                        </div>
+                        <div class="chat-input">
+                            <input type="text" placeholder="Type a message...">
+                            <button><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile View -->
+            <div class="view-section" id="profileView" style="display: none;">
+                <div class="profile-container">
+                    <h2>My Profile</h2>
+                    <div class="profile-summary">
+                        <!-- Profile information will be loaded here -->
+                    </div>
+                    <div class="financial-summary">
+                        <h3>Financial Summary</h3>
+                        <!-- Financial information will be loaded here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings View -->
+            <div class="view-section" id="settingsView" style="display: none;">
+                <div class="settings-container">
+                    <h2>Account Settings</h2>
+                    <form id="settingsForm">
+                        <!-- Settings fields will be loaded here -->
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="database.js"></script>
+    <script src="client-portal.js"></script>
+</body>
+</html>
