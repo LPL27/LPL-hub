@@ -1,0 +1,74 @@
+{
+    "client_id": "C123456",
+    "personal_information": {
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "date_of_birth": "1985-07-15",
+      "gender": "Female",
+      "marital_status": "Married",
+      "contact_details": {
+        "email": "jane.doe@example.com",
+        "phone_number": "+1-555-123-4567",
+        "address": {
+          "street": "123 Elm Street",
+          "city": "Springfield",
+          "state": "IL",
+          "zip_code": "62704",
+          "country": "USA"
+        }
+      },
+      "employment_details": {
+        "employer": "Tech Solutions Inc.",
+        "position": "Senior Software Engineer",
+        "annual_income": 95000,
+        "employment_status": "Full-Time",
+        "years_with_employer": 5
+      }
+    },
+    "financial_profile": {
+      "assets": {
+        "cash": 15000,
+        "savings": 30000,
+        "investments": {
+          "stocks": 25000,
+          "bonds": 10000,
+          "mutual_funds": 20000
+        },
+        "real_estate": 200000,
+        "other_assets": 5000
+      },
+      "liabilities": {
+        "mortgage": 180000,
+        "car_loan": 15000,
+        "credit_card_debt": 5000,
+        "student_loans": 20000
+      },
+      "net_worth": 300000,
+      "financial_goals": [
+        {
+          "goal_id": "G1",
+          "description": "Retirement Planning",
+          "target_amount": 1000000,
+          "time_horizon_years": 20
+        },
+        {
+          "goal_id": "G2",
+          "description": "Children's Education Fund",
+          "target_amount": 500000,
+          "time_horizon_years": 10
+        },
+        {
+          "goal_id": "G3",
+          "description": "Home Renovation",
+          "target_amount": 30000,
+          "time_horizon_years": 5
+        }
+      ],
+      "risk_tolerance": "Moderate",
+      "investment_preferences": {
+        "preferred_assets": ["Stocks", "Mutual Funds"],
+        "diversification_level": "High",
+        "ethical_investing": true
+      }
+    }
+}
